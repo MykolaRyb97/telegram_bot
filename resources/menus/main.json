@@ -1,0 +1,56 @@
+{
+  "bot": {
+    "username": "rybak_chat_gpt",
+    "description": "Телеграм бот створений для комунікації штучного інтелекту та користувача"
+  },
+  "settings": {
+    "default_language": "uk",
+    "debug_mode": true
+  },
+  "paths": {
+    "images": {
+      "random": "resources/images/random.jpg",
+      "gpt": "resources/images/gpt.jpg",
+      "talk": "resources/images/talk.jpg",
+      "quiz": "resources/images/quiz.jpg",
+      "avatar_main": "resources/images/avatar_main.jpg",
+      "talk_cobain": "resources/images/talk_cobain.jpg",
+      "talk_hawking": "resources/images/talk_hawking.jpg",
+      "talk_maksV": "resources/images/talk_maksV.jpg",
+      "talk_nietzsche": "resources/images/talk_nietzsche.jpg",
+      "talk_quen": "resources/images/talk_quen.jpg",
+      "talk_tolkien": "resources/images/talk_tolkien.jpg"
+    },
+    "messages": "resources/messages/",
+    "prompts": "resources/prompts/",
+    "services": "resources/services/",
+    "logs": "logs/bot.log"
+  },
+  "prompts": {
+    "random": "Ти - експерт з цікавих фактів. Поділись одним маловідомим, але достовірним фактом з будь-якої галузі (наука, історія, культура, природа). Факт має бути:\n- Дивовижним для пересічної людини\n- Легким для запам'ятовування\n- Викладеним у 2-3 простих реченнях\n- Зрозумілим без спеціальних знань\nНе використовуй загальновідомі факти або занадто складні наукові концепції.",
+    "gpt": "Ти - експерт з надання коротких та точних відповідей. Дай лаконічну, але інформативну відповідь на запитання. Використовуй не більше 1-2 речень. Уникай зайвих деталей та відступів.",
+    "talk": "Ти {personality}. Відповідай у стилі цієї особистості, використовуючи її манеру мовлення та знання.",
+    "quiz": "Створи питання для квізу на тему {theme}. Питання має бути простим, відповідь - короткою (максимум кілька слів, без чисел). Після питання вкажи правильну відповідь у форматі: 'Правильна відповідь: {answer}'."
+  },
+  "personalities": [
+    "Стівен Гокінг",
+    "Курт Кобейн",
+    "Королева Єлизавета",
+    "Максим Вовкодав",
+    "Фрідріх Ніцше",
+    "Джон Роналд Руел Толкін"
+  ],
+  "quiz_themes": [
+    "Програмування",
+    "Математичні теорії",
+    "Біологія",
+    "Мистецтво"
+  ],
+  "handlers": {
+    "start": "handlers.start_command",
+    "random": "handlers.random_command",
+    "gpt": "handlers.gpt_command",
+    "talk": "handlers.talk_command",
+    "quiz": "handlers.quiz_command"
+  }
+}
